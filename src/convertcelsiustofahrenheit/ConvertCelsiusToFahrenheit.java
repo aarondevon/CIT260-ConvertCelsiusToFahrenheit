@@ -9,13 +9,23 @@ package convertcelsiustofahrenheit;
  *
  * @author awesome
  */
+import java.util.Scanner;
 public class ConvertCelsiusToFahrenheit {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        double cTemp, fTemp;
+        
+        Scanner keyboard = new Scanner(System.in);
+        System.out.println("Please enter a temperature in Celsius:");
+        
+        cTemp = keyboard.nextInt();
+        
+        fTemp = (9.0 / 5.0) * cTemp + 32;
+        
+        System.out.println(cTemp + " degrees celsuis is " + fTemp + " degrees fahrenheit.");
     }
     
 }
