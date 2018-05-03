@@ -16,16 +16,19 @@ public class ConvertCelsiusToFahrenheit {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        double cTemp, fTemp;
+        int cTemp, fTemp;
         
         Scanner keyboard = new Scanner(System.in);
         System.out.println("Please enter a temperature in Celsius:");
-        
+        while (!keyboard.hasNextInt()) { 
+            System.out.println("Please enter a valid temperature.");
+            keyboard.nextLine();
+        } 
         cTemp = keyboard.nextInt();
         
-        fTemp = (9.0 / 5.0) * cTemp + 32;
+        fTemp = (9 / 5) * cTemp + 32;
         
         System.out.println(cTemp + " degrees celsuis is " + fTemp + " degrees fahrenheit.");
+        keyboard.close();
     }
-    
 }
